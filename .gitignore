@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+
+# Tools
+compile_commands.json
+.cache/
+.ccls-cache/
+
+# Editors
+.vs/
+.vscode/
+.idea/
+
+# Build directories
+build/
+out/
+
+CMakeUserPresets.json
