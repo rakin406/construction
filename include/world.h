@@ -34,19 +34,23 @@ private:
     void initializeCamera();
 
     /**
-     * @brief Detect key and move player according to direction.
+     * @brief Draw the whole world.
      */
-    void handlePlayerMovement();
+    void draw();
+
+    /**
+     * @brief Convert world coordinates to grid coordinates.
+     *
+     * @param position
+     *
+     * @return grid coordinates.
+     */
+    static Vector3 worldToGrid(Vector3 position);
 
     /**
      * @brief Draw ground/floor.
      */
-    void drawGround();
-
-    /**
-     * @brief Draw the whole world.
-     */
-    void draw();
+    static void drawGround();
 };
 
 #endif  // INCLUDE_WORLD_H_

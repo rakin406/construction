@@ -16,19 +16,6 @@ void drawCrosshair() {
     int centerY { GetScreenHeight() / 2 };
     DrawCircle(centerX, centerY, 5.0F, RED);
 }
-
-/**
- * @brief Convert world coordinates to grid coordinates.
- *
- * @param position
- *
- * @return grid coordinates.
- */
-Vector3 worldToGrid(Vector3 position, int tileSize) {
-    return { std::floor(position.x / tileSize),
-             std::floor(position.y / tileSize),
-             std::floor(position.z / tileSize) };
-}
 }  // namespace
 
 World::World() {
@@ -52,7 +39,10 @@ void World::initializeCamera() {
     m_camera.projection = CAMERA_PERSPECTIVE;  // Camera projection type
 }
 
-void World::handlePlayerMovement() {
+Vector3 World::worldToGrid(Vector3 position) {
+    return { std::floor(position.x / TILE_SIZE),
+             std::floor(position.y / TILE_SIZE),
+             std::floor(position.z / TILE_SIZE) };
 }
 
 void World::drawGround() {
