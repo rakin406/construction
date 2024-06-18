@@ -42,10 +42,12 @@ endif()
 
 set(HEADERS
     include/constants.h
+    include/world.h
 )
 
 set(SOURCES
     src/main.cpp
+    src/world.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
