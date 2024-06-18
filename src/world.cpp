@@ -5,6 +5,17 @@
 #include <raylib.h>
 #include <rcamera.h>
 
+namespace {
+/**
+ * @brief Draw a circular crosshair at the center of the screen.
+ */
+void drawCrosshair() {
+    int centerX { GetScreenWidth() / 2 };
+    int centerY { GetScreenHeight() / 2 };
+    DrawCircle(centerX, centerY, 5.0F, RED);
+}
+}  // namespace
+
 World::World() {
     // Create 3D camera
     initializeCamera();
@@ -45,6 +56,8 @@ void World::draw() {
     drawGround();
 
     EndMode3D();
+
+    drawCrosshair();
 
     EndDrawing();
 }
