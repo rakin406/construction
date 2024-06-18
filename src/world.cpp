@@ -5,6 +5,8 @@
 #include <raylib.h>
 #include <rcamera.h>
 
+#include <cmath>
+
 namespace {
 /**
  * @brief Draw a circular crosshair at the center of the screen.
@@ -13,6 +15,19 @@ void drawCrosshair() {
     int centerX { GetScreenWidth() / 2 };
     int centerY { GetScreenHeight() / 2 };
     DrawCircle(centerX, centerY, 5.0F, RED);
+}
+
+/**
+ * @brief Convert world coordinates to grid coordinates.
+ *
+ * @param position
+ *
+ * @return grid coordinates.
+ */
+Vector3 worldToGrid(Vector3 position, int tileSize) {
+    return { std::floor(position.x / tileSize),
+             std::floor(position.y / tileSize),
+             std::floor(position.z / tileSize) };
 }
 }  // namespace
 
