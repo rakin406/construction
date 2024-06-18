@@ -41,7 +41,7 @@ void World::handlePlayerMovement() {
 }
 
 void World::drawGround() {
-    DrawGrid(100, 1.0F);
+    DrawGrid(HORIZONTAL_LIMIT, BLOCK_SIZE);
 }
 
 void World::draw() {
