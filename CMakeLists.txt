@@ -43,11 +43,13 @@ endif()
 set(HEADERS
     include/constants.h
     include/world.h
+    include/block.h
 )
 
 set(SOURCES
     src/main.cpp
     src/world.cpp
+    src/block.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
