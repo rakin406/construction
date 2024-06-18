@@ -1,18 +1,18 @@
-#include "raylib.h"
+// Copyright 2024 Rakin Rahman
+
+#include <constants.h>
+
+#include <raylib.h>
 
 int main() {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
-
-    InitWindow(screenWidth, screenHeight,
-               "raylib [core] example - basic window");
+    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE.data());
 
     SetTargetFPS(60);
 
     while (!WindowShouldClose())  // Detect window close button or ESC key
     {
         // Update
-        // TODO: Update your variables here
+        // TODO(rakin): Update your variables here
 
         // Draw
         BeginDrawing();

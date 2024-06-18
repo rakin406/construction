@@ -41,18 +41,15 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
 endif()
 
 set(HEADERS
-    # include/api/controllers/cameraController.h
-    # include/api/models/camera.h
+    include/constants.h
 )
 
 set(SOURCES
-    # src/api/controllers/cameraController.cpp
-    # src/api/models/camera.cpp
     src/main.cpp
 )
 
-add_executable(${PROJECT_NAME} ${SOURCES})
-# target_include_directories(${PROJECT_NAME} PRIVATE include)
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PRIVATE include)
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 
 # Compiler options
