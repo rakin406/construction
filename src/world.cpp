@@ -18,6 +18,11 @@ void drawCrosshair() {
 }
 }  // namespace
 
+// TODO(rakin): Change ugly world map initialization.
+// World::World() : m_worldMap({ { { { { false } } } } }) {
+//     // Create 3D camera
+//     initializeCamera();
+// }
 World::World() {
     // Create 3D camera
     initializeCamera();
@@ -50,7 +55,7 @@ void World::drawGround() {
 }
 
 void World::draw() {
-    UpdateCamera(&m_camera, CAMERA_FIRST_PERSON);
+    UpdateCamera(&m_camera, CAMERA_FREE);
 
     BeginDrawing();
 
