@@ -10,6 +10,10 @@
  */
 class World {
 public:
+    // Constants
+    static constexpr int HORIZONTAL_LIMIT { 100 };
+    static constexpr int VERTICAL_LIMIT { 320 };
+
     /**
      * @brief Default constructor for World initialization.
      */
