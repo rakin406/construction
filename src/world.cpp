@@ -30,7 +30,7 @@ void World::handlePlayerMovement() {
 }
 
 void World::drawGround() {
-    DrawPlane({ 0.0F, 0.0F, 0.0F }, { 32.0F, 32.0F }, LIGHTGRAY);
+    DrawGrid(100, 1.0F);
 }
 
 void World::draw() {
