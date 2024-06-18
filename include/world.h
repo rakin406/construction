@@ -11,7 +11,7 @@
 class World {
 public:
     // Constants
-    static constexpr float BLOCK_SIZE { 1.0F };
+    static constexpr float TILE_SIZE { 1.0F };
     static constexpr int HORIZONTAL_LIMIT { 1000 };
     static constexpr int VERTICAL_LIMIT { 320 };
 
