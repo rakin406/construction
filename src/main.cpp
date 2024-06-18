@@ -7,6 +7,8 @@
 int main() {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE.data());
 
+    DisableCursor();
+
     SetTargetFPS(60);
 
     while (!WindowShouldClose())  // Detect window close button or ESC key
